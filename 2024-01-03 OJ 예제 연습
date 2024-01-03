@@ -1,0 +1,342 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNhy2+3LbDAHKtszNTAj4P7",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/202145225/aipython/blob/main/2024-01-03%20OJ%20%EC%98%88%EC%A0%9C%20%EC%97%B0%EC%8A%B5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Pu9GpT1VyhKi",
+        "outputId": "9a05d62e-f5be-4666-ab19-f0f36cf4fdc5"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5 6\n",
+            "11\n"
+          ]
+        }
+      ],
+      "source": [
+        "# 두 정수 A와 B를 입력받기\n",
+        "A, B = map(int, input().split())\n",
+        "\n",
+        "# A와 B를 더한 결과 출력\n",
+        "result = A + B\n",
+        "print(result)\n",
+        "\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 시험 점수 입력받기\n",
+        "score = int(input())\n",
+        "\n",
+        "# 등급 계산 및 출력\n",
+        "if 90 <= score <= 100:\n",
+        "    grade = 'A'\n",
+        "elif 80 <= score < 90:\n",
+        "    grade = 'B'\n",
+        "elif 70 <= score < 80:\n",
+        "    grade = 'C'\n",
+        "elif 60 <= score < 70:\n",
+        "    grade = 'D'\n",
+        "else:\n",
+        "    grade = 'F'\n",
+        "\n",
+        "print(grade)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "lFjaz0VYy_Xl",
+        "outputId": "1d5ed57d-a8f1-43de-9613-252d101a7633"
+      },
+      "execution_count": 4,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "59\n",
+            "F\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 10\n",
+        "if a > 5:\n",
+        "print(\"a는 5보다 큽니다.\")\n",
+        "elif a < = 5:\n",
+        "print(\"a는 5보다 작거나 같습니다.\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "w8XTeCy26uCo",
+        "outputId": "5a09cb18-de9b-4c7f-b822-23f54e345d64"
+      },
+      "execution_count": 10,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-10-0eab78f8db02>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    print(\"a는 5보다 큽니다.\")\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block after 'if' statement on line 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 시험 점수 입력받기\n",
+        "score = int(input())\n",
+        "\n",
+        "# 등급 계산 및 출력\n",
+        "if: a>=90\n",
+        "  print('A')\n",
+        "elif b>=80\n",
+        "  print('B')\n",
+        "elif c>=70\n",
+        "  print('C')\n",
+        "elif d>=60\n",
+        "  print('D')\n",
+        "else:\n",
+        "    grade = 'F'\n",
+        "\n",
+        "print(grade)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "3-lU3RGr8vOU",
+        "outputId": "ca455d4a-69c7-48e3-cedf-9facdc4af413"
+      },
+      "execution_count": 12,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-12-eacf8ed8c06c>\"\u001b[0;36m, line \u001b[0;32m5\u001b[0m\n\u001b[0;31m    if: a>=90\u001b[0m\n\u001b[0m      ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 시험 점수 입력받기\n",
+        "score = int(input())\n",
+        "\n",
+        "# 등급 계산 및 출력\n",
+        "if score >= 90:\n",
+        "    grade = 'A'\n",
+        "elif score >= 80:\n",
+        "    grade = 'B'\n",
+        "elif score >= 70:\n",
+        "    grade = 'C'\n",
+        "elif score >= 60:\n",
+        "    grade = 'D'\n",
+        "else:\n",
+        "    grade = 'F'\n",
+        "\n",
+        "print(grade)\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5cVcucguBbgF",
+        "outputId": "f0cecd8b-b902-4441-c71b-e75698f66688"
+      },
+      "execution_count": 13,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "62\n",
+            "D\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 7\n",
+        "b = 8\n",
+        "\n",
+        "if a > 5 and b < 10:\n",
+        "    print(\"두 조건 모두 참입니다.\")\n",
+        "else:\n",
+        "    print(\"적어도 하나의 조건이 거짓입니다.\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UB10bLl9CLkt",
+        "outputId": "feb96e1a-2a0b-4c6d-a9a1-ea6362b4a11e"
+      },
+      "execution_count": 14,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "두 조건 모두 참입니다.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        " 반복문 for\n",
+        "(1) range() 함수 사용\n",
+        "for i in range(start, stop, step):\n",
+        "print( i )\n",
+        "for i in range(1, 10, 2):\n",
+        "print(i)\n",
+        "for x in '월화수':\n",
+        "print(x)\n",
+        "(2) 반복 범위가 문자인 경우"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "UBCZydcGEZQG",
+        "outputId": "c9ac4d90-61f8-4cbe-cc51-e9b59396fe88"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "SyntaxError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-15-e605a2751166>\"\u001b[0;36m, line \u001b[0;32m1\u001b[0m\n\u001b[0;31m    반복문 for\u001b[0m\n\u001b[0m        ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "n = int(input())\n",
+        "sum_value = 0\n",
+        "\n",
+        "for i in range(1, n + 1):\n",
+        "    sum_value += i\n",
+        "\n",
+        "print(sum_value)\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "77fMX8FAGrXe",
+        "outputId": "d20d119f-41d5-4312-b220-daea3e177748"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5\n",
+            "15\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A, B, C = map(int, input().split())\n",
+        "if A >= B and A >= C:\n",
+        "    if B >= C:\n",
+        "        second_largest = B\n",
+        "    else:\n",
+        "        second_largest = C\n",
+        "elif B >= A and B >= C:\n",
+        "    if A >= C:\n",
+        "        second_largest = A\n",
+        "    else:\n",
+        "        second_largest = C\n",
+        "else:\n",
+        "    if A >= B:\n",
+        "        second_largest = A\n",
+        "    else:\n",
+        "        second_largest = B\n",
+        "\n",
+        "# 결과 출력\n",
+        "print(second_largest)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UDeYP16fKrwm",
+        "outputId": "3d430502-b1d7-4cba-97c0-75b5c09f53a8"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5 608455 984651\n",
+            "608455\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
