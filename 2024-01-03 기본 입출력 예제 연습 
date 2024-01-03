@@ -1,0 +1,404 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyNb9EE5Mc72fLzdu8SpfRhM",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/202145225/aipython/blob/main/2024-01-03%20%EA%B8%B0%EB%B3%B8%20%EC%9E%85%EC%B6%9C%EB%A0%A5%20%EC%98%88%EC%A0%9C%20%EC%97%B0%EC%8A%B5%20\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 4,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "UE2VEFziNaGB",
+        "outputId": "6c4640f0-cd44-4fec-d598-8b63099a8b40"
+      },
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<tokenize>\"\u001b[0;36m, line \u001b[0;32m6\u001b[0m\n\u001b[0;31m    average = (test1 + test2 + test3) / 3\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m unindent does not match any outer indentation level\n"
+          ]
+        }
+      ],
+      "source": [
+        "#4-1\n",
+        "HIGH_SCORE = 95\n",
+        "def main():\n",
+        "  test1 = int(input('Enter the score for test 1: '))\n",
+        "  test2 = int(input('Enter the score for test 2: '))\n",
+        "  test3 = int(input('Enter the score for test 3: '))\n",
+        " average = (test1 + test2 + test3) / 3\n",
+        " print('The average score is', average)\n",
+        " # 평균값이 HIGH_SCORE 보다 클 경우에 메시지 출력\n",
+        " if average >= HIGH_SCORE:\n",
+        "  print('Congratulations!')\n",
+        "  print('That is a great average!')\n",
+        "main()\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# 4-2 (auto_repair_payroll.py)\n",
+        "\n",
+        "BASE_HOURS = 40 # Base hours per week\n",
+        "OT_MULTIPLIER = 1.5 # Overtime multiplier\n",
+        "def main(): # 근무시간과 시간당 급여를 입력받아 각 변수에 할당한다.\n",
+        "  hours_worked = float(input('Enter the number of hours worked: '))\n",
+        "  pay_rate = float(input('Enter the hourly pay rate: '))\n",
+        " # 총 급여를 계산하고 그 결과를 출력한다.\n",
+        "  if hours_worked > BASE_HOURS:\n",
+        "    calc_pay_with_OT(hours_worked, pay_rate)\n",
+        "  else:\n",
+        "    calc_regular_pay(hours_worked, pay_rate)\n",
+        "# 근무시간이 BASE_HOURS 보다 크다면 초과근무 비율을 고려하여 계산한다.\n",
+        "def calc_pay_with_OT(hours, rate): # 초과 근무시간을 계산한다.\n",
+        "  overtime_hours = hours - BASE_HOURS\n",
+        "\n",
+        " # 초과 근무시간의 급여를 계산한다.\n",
+        "  overtime_pay = overtime_hours * rate * OT_MULTIPLIER\n",
+        " # 총 급여를 계산한다.\n",
+        "  gross_pay = BASE_HOURS * rate + overtime_pay\n",
+        " # 총 급여를 출력한다.\n",
+        "  print('The gross pay is $', format(gross_pay, ',.2f'), sep='')\n",
+        "# 초과근무를 하지 않았다면 근무시간과 시간당 급여를 통해 총 급여를 계산하고 출력한다.\n",
+        "def calc_regular_pay(hours, rate): # 총 급여를 계산한다.\n",
+        "  gross_pay = hours * rate\n",
+        " # 총 급여를 출력한다.\n",
+        "  print('The gross pay is $', format(gross_pay, ',.2f'), sep='')\n",
+        "\n",
+        "\n",
+        "main()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "GMCYdMZNT6o3",
+        "outputId": "bf6bb727-54f7-445c-c6a4-eaf3cf3e7f1a"
+      },
+      "execution_count": 21,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the number of hours worked: 89\n",
+            "Enter the hourly pay rate: 9860\n",
+            "The gross pay is $1,119,110.00\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "매개변수, 파라메타, 인자, 아구먼트는 두루두루 쓰이는\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "\n",
+        "비슷한 말이다."
+      ],
+      "metadata": {
+        "id": "C7KbdhLENpom"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "def add(x,y):\n",
+        "   s=x+y\n",
+        "   a=s/2\n",
+        "   return s, a\n",
+        "h,a = add(10, 20)\n",
+        "print(\"합:\",h, \"평균:\",a)\n",
+        "\n",
+        "# print(\"합: %d 평균: %.2f\"%(hap, avg)) 으로도 가능함"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "-ZpaxrzePBl2",
+        "outputId": "c262c1c8-a652-4055-dbfb-745ff3f3f9aa"
+      },
+      "execution_count": 7,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "합: 30 평균: 15.0\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "함수는 정의를 하고 끝나는 것이 아니라 정의를 하고 호출을 해야지 함수를 사용할 수 있다."
+      ],
+      "metadata": {
+        "id": "4KQxUhkhQoK2"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-3 (password.py)\n",
+        "password = input('Enter the password: ')\n",
+        "if password == 'prospero':\n",
+        "  print('Password accepted.')\n",
+        "else:\n",
+        "  print('Sorry, that is the wrong password.')"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "W5P7A7zdVh9P",
+        "outputId": "4a2c3ee1-1611-4448-f516-853674bb4976"
+      },
+      "execution_count": 22,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter the password: prospero\n",
+            "Password accepted.\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 1\n",
+        "while ( a <= 3 ):\n",
+        "print('안녕', a)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 147
+        },
+        "id": "PjKX0gn6PZx0",
+        "outputId": "0a267275-dbd3-4654-a2ad-8e81ecaea4e9"
+      },
+      "execution_count": 8,
+      "outputs": [
+        {
+          "output_type": "error",
+          "ename": "IndentationError",
+          "evalue": "ignored",
+          "traceback": [
+            "\u001b[0;36m  File \u001b[0;32m\"<ipython-input-8-c59e9c65e090>\"\u001b[0;36m, line \u001b[0;32m3\u001b[0m\n\u001b[0;31m    print('안녕', a)\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mIndentationError\u001b[0m\u001b[0;31m:\u001b[0m expected an indented block after 'while' statement on line 2\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a = 1\n",
+        "while a <= 3:\n",
+        "    print('안녕', a)\n",
+        "    a += 1  # a를 증가시켜 무한 루프를 방지\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "mlJWweXIQ2YX",
+        "outputId": "466e5d07-a131-4912-d509-9c39b0c522d4"
+      },
+      "execution_count": 9,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "안녕 1\n",
+            "안녕 2\n",
+            "안녕 3\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#4-4 (sort_names.py)\n",
+        "\n",
+        "name1 = input('Enter a name (last name first): ')\n",
+        "name2 = input('Enter another name (last name first): ')\n",
+        "\n",
+        "# 입력받은 이름을 알파벳 순서에 따라 출력해보자.\n",
+        "print('Here are the names, listed alphabetically.')\n",
+        "if name1 < name2:\n",
+        "  print(name1)\n",
+        "  print(name2)\n",
+        "else:\n",
+        "  print(name2)\n",
+        "  print(name1)"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "WZrMCjvsVuy3",
+        "outputId": "5330a964-e706-45b9-a342-4ba88e13a095"
+      },
+      "execution_count": 23,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Enter a name (last name first): 최\n",
+            "Enter another name (last name first): 유진\n",
+            "유진\n",
+            "최\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5-16 2024-01-03 예제\n",
+        "\n",
+        "BASE_SIZE = 8\n",
+        "for r in range(BASE_SIZE):\n",
+        "  for c in range(r+1):\n",
+        "    print('*', end='')\n",
+        "  print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "6K62ssUNWWzg",
+        "outputId": "b6aa299d-7a3a-43dd-ff79-685281b610bb"
+      },
+      "execution_count": 27,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "*\n",
+            "**\n",
+            "***\n",
+            "****\n",
+            "*****\n",
+            "******\n",
+            "*******\n",
+            "********\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "#5-16 2024-01-03 예제 변형\n",
+        "\n",
+        "BASE_SIZE = 8\n",
+        "\n",
+        "for c in range(BASE_SIZE):\n",
+        "  for r in range(r-1):\n",
+        "    print('*', end='')\n",
+        "  print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DKsU_-J6W32f",
+        "outputId": "15166168-287a-4843-d727-801a92b3b2c0"
+      },
+      "execution_count": 30,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "******\n",
+            "****\n",
+            "**\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n",
+            "\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "BASE_SIZE = 8\n",
+        "for r in range(BASE_SIZE):\n",
+        "    for c in range(BASE_SIZE - r):\n",
+        "        print('*', end='')\n",
+        "    print()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "Uci5vP2_XvXu",
+        "outputId": "9bbcd368-8373-467f-d9ad-c721fe603983"
+      },
+      "execution_count": 31,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "********\n",
+            "*******\n",
+            "******\n",
+            "*****\n",
+            "****\n",
+            "***\n",
+            "**\n",
+            "*\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
