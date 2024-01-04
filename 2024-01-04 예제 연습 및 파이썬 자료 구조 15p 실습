@@ -105,7 +105,7 @@
         "\n",
         "print('Done')\n",
         "\n",
-        "#중첩반복문for로도 한번 풀어봅시다잉"
+       
       ],
       "metadata": {
         "colab": {
