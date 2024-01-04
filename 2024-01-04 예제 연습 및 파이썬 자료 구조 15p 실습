@@ -1,0 +1,390 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "authorship_tag": "ABX9TyOLNcErCGtZxkzaZFeJnOsh",
+      "include_colab_link": true
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {
+        "id": "view-in-github",
+        "colab_type": "text"
+      },
+      "source": [
+        "<a href=\"https://colab.research.google.com/github/202145225/aipython/blob/main/2024-01-04%20%EC%98%88%EC%A0%9C%20%EC%97%B0%EC%8A%B5%20%EB%B0%8F%20%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9E%90%EB%A3%8C%20%EA%B5%AC%EC%A1%B0%2015p%20%EC%8B%A4%EC%8A%B5\" target=\"_parent\"><img src=\"https://colab.research.google.com/assets/colab-badge.svg\" alt=\"Open In Colab\"/></a>"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "VDvd8zyg-5wZ",
+        "outputId": "a5bd00d2-5e42-45a2-b8cc-31f49d1e0e5f"
+      },
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "안녕 1\n",
+            "안녕 2\n",
+            "안녕 3\n"
+          ]
+        }
+      ],
+      "source": [
+        "\n",
+        "a=1\n",
+        "while(a<=3):\n",
+        "  print('안녕',a)\n",
+        "  a=a+1 #a+=1 과 같다.\n"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "i = 1\n",
+        "while i <= 10:\n",
+        " print(i)\n",
+        " i =i+ 1\n",
+        "\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "TDDdGNDQGRwM",
+        "outputId": "c32791cd-0682-4706-bd5c-d6d1e6adebaa"
+      },
+      "execution_count": 18,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1\n",
+            "2\n",
+            "3\n",
+            "4\n",
+            "5\n",
+            "6\n",
+            "7\n",
+            "8\n",
+            "9\n",
+            "10\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "a=1\n",
+        "while(a<=4):\n",
+        "  print(a,'Welcome')\n",
+        "  a+=1\n",
+        "  i=1\n",
+        "  while(i<=3):\n",
+        "    print(i,'Hello')\n",
+        "    i+=1\n",
+        "\n",
+        "print('Done')\n",
+        "\n",
+        "#중첩반복문for로도 한번 풀어봅시다잉"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "UgWpB4YwIGgy",
+        "outputId": "316ba098-2fbd-4850-ea93-9ec1b077754a"
+      },
+      "execution_count": 25,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 Welcome\n",
+            "1 Hello\n",
+            "2 Hello\n",
+            "3 Hello\n",
+            "2 Welcome\n",
+            "1 Hello\n",
+            "2 Hello\n",
+            "3 Hello\n",
+            "3 Welcome\n",
+            "1 Hello\n",
+            "2 Hello\n",
+            "3 Hello\n",
+            "4 Welcome\n",
+            "1 Hello\n",
+            "2 Hello\n",
+            "3 Hello\n",
+            "Done\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "for i in range(1, 5):\n",
+        "    if i != 3:\n",
+        "        print(f\"{i} Welcome\")\n",
+        "        for j in range(1, 4):\n",
+        "            print(f\"{i} Hello\")\n",
+        "print(\"Done\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "5UU9HGsJbUeF",
+        "outputId": "67be8004-d377-4ba2-dc6e-425f54d5f4f2"
+      },
+      "execution_count": 42,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "1 Welcome\n",
+            "1 Hello\n",
+            "1 Hello\n",
+            "1 Hello\n",
+            "2 Welcome\n",
+            "2 Hello\n",
+            "2 Hello\n",
+            "2 Hello\n",
+            "4 Welcome\n",
+            "4 Hello\n",
+            "4 Hello\n",
+            "4 Hello\n",
+            "Done\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "A, B, C=map(int, input().split())\n",
+        "# 이건 한번에 ABC 값을 받기 위해 하는것이고\n",
+        "# A=input()\n",
+        "# B=input()  요렇게 하면 하나씩 받는거임\n",
+        "if (B>=A>=C) or (C>=A>=B):\n",
+        "  result=A\n",
+        "elif (A>=B>=C) or (C>=B>=A):\n",
+        "  result = B\n",
+        "else:\n",
+        "  result = C\n",
+        "\n",
+        "print(result)\n",
+        "\n",
+        "\n",
+        "A,B,C=map(int,input().split())\n",
+        "nums=[A,B,C]\n",
+        "nums.sort()\n",
+        "\n",
+        "print(nums[1])"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "jRYXaNNLIyy6",
+        "outputId": "67930563-951d-4889-967c-57e95ef2be58"
+      },
+      "execution_count": 29,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "5 895 8484654\n",
+            "895\n",
+            "5 665454656 484653512478\n",
+            "665454656\n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "0. 자료구조 요약은 꼭 외우기\n",
+        "1. 리스트(list)\n",
+        " - 순서가 있는 변경 가능한 항목의 컬렉션\n",
+        " - 기호가 대괄호\n",
+        "ex) nums=[1, 2, 3]\n",
+        "Q:  nums=[1, 2, 3]\n",
+        "    nums[1]=0 #nums에서 2를 0으로 변경하겠다는 거임\n",
+        "    실행시켜도 문제 없음\n",
+        "\n",
+        "2. 튜플(Tuple)\n",
+        " - 순서가 있는 변경이 '불가능'한 항목의 컬렉션\n",
+        " - 기호는 소괄호\n",
+        " ex) num=(1, 2, 3)\n",
+        " Q: num=(1, 2, 3)\n",
+        "    num(1)=0은 튜플에서는 변경이 허용 X, 따라서 실행 X\n",
+        "    \n",
+        "3. 세트(set)\n",
+        " - 순서가 없고 \"**중복을 허용하지 않는**\" 항목\n",
+        "  -> 리스트랑 튜플을 중복 허용함\n",
+        "  -> 많이 사용되진 않음\n",
+        "\n",
+        "4. 딕셔너리[사전](Dictionary)\n",
+        " - 키와 같이 쌍으로 구성된 항목의 컬렉션\n",
+        "  -> 단어와 연관된 #태그를 달 수 있다는 것이 특징\n",
+        "ex) 'name': 'John\",\n"
+      ],
+      "metadata": {
+        "id": "mwlNNM1tO1dC"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "- print(x[1:3]) 을 슬라이싱이라고 한다\n",
+        "':'를 기준으로 시작:종료 이다. 1이 시작, 3이 종료 이다.\n",
+        "\n",
+        "- (내장) 함수와 메소드는 꼭 구분해야함\n",
+        "함수는 단독으로 옆에 붙는거 없이 사용됨\n"
+      ],
+      "metadata": {
+        "id": "KjVhOvU3UeBq"
+      }
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score= [[29, 28, 27, 30],\n",
+        "[30, 20, 27, 29],\n",
+        "[23, 25, 29, 30]]\n",
+        "for r in range(3):\n",
+        "  for c in range(4):\n",
+        "    print(score[r][c], end=\" \")\n",
+        "  print()"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "q5IMVa7FZ8ub",
+        "outputId": "80c36412-3ad6-43b4-858a-048ec0370b51"
+      },
+      "execution_count": 32,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "29 28 27 30 \n",
+            "30 20 27 29 \n",
+            "23 25 29 30 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score = [\n",
+        "    [29, 28, 27, 30],\n",
+        "    [30, 20, 27, 29],\n",
+        "    [23, 25, 29, 30]\n",
+        "]\n",
+        "\n",
+        "num_rows = len(score)\n",
+        "num_cols = len(score[0]) if num_rows > 0 else 0\n",
+        "\n",
+        "for r in range(num_rows):\n",
+        "    for c in range(num_cols):\n",
+        "        print(score[r][c], end=\" \")\n",
+        "    print()\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "wHTOZiqVaeZ9",
+        "outputId": "9c6b552c-a084-4243-b197-99a110e6d0cb"
+      },
+      "execution_count": 33,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "29 28 27 30 \n",
+            "30 20 27 29 \n",
+            "23 25 29 30 \n"
+          ]
+        }
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "score = []\n",
+        "\n",
+        "while True:\n",
+        "    try:\n",
+        "        input_score = input(\"학생의 점수를 입력하세요 (종료하려면 'exit' 입력): \")\n",
+        "        if input_score.lower() == 'exit':\n",
+        "            break\n",
+        "        score.append(float(input_score))\n",
+        "    except ValueError:\n",
+        "\n",
+        "        break\n",
+        "\n",
+        "total = sum(score)\n",
+        "num_students = len(score)\n",
+        "average = total / num_students if num_students > 0 else 0\n",
+        "\n",
+        "print(f\"모든 학생들의 합계: {total}\")\n",
+        "print(f\"총 인원수: {num_students}\")\n",
+        "print(f\"평균 점수: {average:.3f}\")\n"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "yPOCOnkgctcd",
+        "outputId": "54593a19-480b-4513-b5a2-084222d4077c"
+      },
+      "execution_count": 46,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "학생의 점수를 입력하세요 (종료하려면 'exit' 입력): 90\n",
+            "학생의 점수를 입력하세요 (종료하려면 'exit' 입력): 70\n",
+            "학생의 점수를 입력하세요 (종료하려면 'exit' 입력): 30\n",
+            "학생의 점수를 입력하세요 (종료하려면 'exit' 입력): x\n",
+            "모든 학생들의 합계: 190.0\n",
+            "총 인원수: 3\n",
+            "평균 점수: 63.333\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
